@@ -11,20 +11,14 @@
             <input type="submit">
         </form>
         <ul>
-            <li>Note one
-                <a href="del"></a>
+           <?php for($i=0;$i<count($data);$i++): ?>
+           
+            <li><?= $data[$i]["text"] ?>
+                <a href="<?= PROJROOT ?>del?<?= $data[$i]["id"] ?>">X</a>
             </li>
-            <li>Note two
-                <a href="del"></a>
-            </li>
-            <li>Note three
-                <a href="del"></a>
-            </li>
+            
+            <?php endfor; ?>
         </ul>
     </div>
 </body>
 </html>
-
-
-
-<!--вставки вывода сделаю после-->
