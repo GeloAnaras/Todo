@@ -9,13 +9,13 @@
     <div class="container">
         <form action="add" method="post">
             <input type="text" name="text" placeholder="type text here">
-            <input type="submit">
+            <input type="submit" value="ok">
         </form>
         <ul>
            <?php for($i=0;$i<count($data);$i++): ?>
            
             <li><?= $data[$i]["text"] ?>
-                <a href="<?= PROJROOT ?>del?<?= $data[$i]["id"] ?>">X</a>
+                <a href="<?= PROJROOT ?>del?<?= $data[$i]["id"] ?>"></a>
             </li>
             
             <?php endfor; ?>

@@ -17,7 +17,7 @@ function router($request){
         include URLROOT."controller.php";
         call_user_func("action_get");
     }
-    if( end(explode("/",trim($request,"/"))) === "add" || end(explode("/",trim($request,"/"))) === "del" ){
+    else if( end(explode("/",trim($request,"/"))) === "add" || end(explode("/",trim($request,"/"))) === "del" ){
         include URLROOT."controller.php";
         call_user_func("action_".end(explode("/",trim($request,"/"))));
     }
